@@ -22,7 +22,8 @@
     <link href="css/sb-admin-2.css" rel="stylesheet">
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/danfojs@1.1.2/lib/bundle.min.js"></script>
-       
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
 
 </head>
 
@@ -462,7 +463,7 @@
                                                     RP = 'Ranking pages'
                                                     REPORT_NAME = ['Google Report', 'Google Mobile Report', 'Bing Report', 'Yahoo! Report']
                                                     COLUMN_NAME = ['Keyword', 'Ranking pages', 'Google HOU Rank', 'Google Previous', 'Google HOU Difference', 'NOTE']
-                                                    frame_data = srk.FIND_FRAME("ABBA_TEST.csv")
+                                                    frame_data = srk.FIND_FRAME("https://actualseomedia.com/reports/abba/data/ 	ReportSERPPositionsGOD.csv")
                                                     GOD = frame_data[0]
                                                     GOD_NAME = REPORT_NAME[0]
                                                     KEY_PARENT = Element("KEY_WORD")
@@ -648,67 +649,167 @@
                     
                             <!-- Card Body -->
                         <div class ="col-lg-6 mb-4">
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Search Engine Listings     
-                                    </h6>
-                                </div>
-                                <div class="card-body">
-                                    <div class="chart-bar">
-                                        <canvas id="myBarChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class ="row">
-
-                        <!-- Pie Chart -->
+                                <!-- Pie Chart -->
                         
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Top Map Rankings     
-                                    </h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
+                                <div class="card shadow mb-4">
+                                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                        <h6 class="m-0 font-weight-bold text-primary">Top Map Rankings     
+                                        </h6>
+                                        <div class="dropdown no-arrow">
+                                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                                aria-labelledby="dropdownMenuLink">
+                                                <div class="dropdown-header">Dropdown Header:</div>
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <canvas id="myPieChart"></canvas>
-                                    </div>
-                                    <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Direct
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> Social
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> Referral
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
+      <!-- Card Body -->
+      <div class="card-body">
+        <div class="chart-pie pt-4 pb-2">
+            <canvas id="myPieChart"></canvas>
+        </div>
+        <div class="mt-4 text-center small">
+            <span class="mr-2">
+                <i class="fas fa-circle text-primary"></i> Google
+            </span>
+            <span class="mr-2">
+                <i class="fas fa-circle text-success"></i> Bing
+            </span>
+            <span class="mr-2">
+                <i class="fas fa-circle text-info"></i> Yahoo
+            </span>
+        </div>
+    </div>
+    </div>
+                    </div>
+                    
 
                     <!-- Content Row -->
                     <div class="row">
-
+                        <div class="col-lg-6 mb-4">
+                            <div class="card shadow mb-4">
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                            <script>
+                                                var table = $('#dataTable').DataTable();
+         
+                                                
+                                            </script>
+                                            <thead>
+                                                <tr>
+                                                    <th id = "Keyword" >Keyword</th>
+                                                    <th id = "RK" >Ranking Pages</th>
+                                                    <th id = "Rank">Rank</th>
+                                                    <th id = "Previous">Previous</th>
+                                                    <th id = "Difference" >Difference</th>
+                                                    <th id = "NO_TE" >Note</th>
+                      
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                      <th id = "Keyword" scope="col">Keyword</th>
+                                      <th id = "RK" scope="col">Ranking Pages</th>
+                                      <th id = "Rank"scope="col">Rank</th>
+                                      <th id = "Previous"scope="col">Previous</th>
+                                      <th id = "Difference" scope="col">Difference</th>
+                                      <th id = "NO_TE" scope="col">Note</th>
+                                      <py-env>
+                                        - matplotlib
+                                        - numpy
+                                        - pandas
+                                        - paths:
+                                            - server_RK.py
+                                            - ABBA_TEST.csv
+                                            
+                                      </py-env>
+                                                </tr>
+                                            </tfoot>
+                                            <tbody id = "ROWS">
+                                                <py-script>
+        import pandas as pd
+        import numpy as np
+        import server_RK as srk
+        from pyodide import create_proxy
+        GHR = 'Google HOU Rank'
+        KW = 'Keyword'
+        VSBY = 'Visibility'
+        GHD = 'Google HOU Difference'
+        GP = 'Google Previous'
+        GMHR = 'Google Mobile HOU Rank'
+        KW = 'Keyword'
+        VSBY = 'Visibility'
+        GMHD = 'Google Mobile HOU Difference'
+        GMP = 'Google Mobile HOU Previous'
+        BNGR = 'Bing US Rank'
+        KW = 'Keyword'
+        VSBY = 'Visibility'
+        BNGDF = "Bing US Difference"
+        BNGP = 'Bing US Previous'
+        YAHR = 'Yahoo! Rank'
+        KW = 'Keyword'
+        VSBY = 'Visibility'
+        YAHDIF = "Yahoo! Difference"
+        YAHP = 'Yahoo! Previous'
+        SE = "SE"
+        NOTE = "NOTE"
+        GMHR = 'Google Mobile HOU Rank'
+        GMHD = 'Google Mobile HOU Difference'
+        RP = 'Ranking pages'
+        REPORT_NAME = ['Google Report', 'Google Mobile Report', 'Bing Report', 'Yahoo! Report']
+        COLUMN_NAME = ['Keyword', 'Ranking pages', 'Google HOU Rank', 'Google Previous', 'Google HOU Difference', 'NOTE']
+        frame_data = pd.read_csv("actualseomedia.com/reports/abba/data/ReportSERPPositionsGOD.csv")
+        GOD = frame_data
+        GOD_NAME = REPORT_NAME[0]
+        for i in range(len(frame_data)):
+         CHILD = document.createElement("tr")
+         
+         parent = document.querySelector("#ROWS")
+         parent.appendChild(CHILD)
+         
+         for r in range(6):
+          LAST_CHILD = document.createElement("td")
+          DF_GOD = pd.DataFrame(data=GOD)
+          LAST_CHILD.innerHTML = DF_GOD.iloc[:,r][i]
+          CHILD.appendChild(LAST_CHILD)
+          
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                          </py-script>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+        
+                        </div>
+                        <!-- /.container-fluid -->
+        
+                    </div>
+                    <!-- End of Main Content -->
                         <!-- Content Column -->
+
+                        <div class="row">
+
                         <div class="col-lg-6 mb-4">
 
 
@@ -887,7 +988,6 @@
     <script src="vendor/chart.js/Chart.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
     <script src="js/demo/chart-bar-demo.js"></script>
 
