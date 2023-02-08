@@ -30,8 +30,8 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 }
 
 // Area Chart Example
-var ctx = document.getElementById("myAreaChart");
-var myLineChart = new Chart(ctx, {
+var ctxCH = document.getElementById("myAreaChart");
+var myLineChart = new Chart(ctxCH, {
   type: 'line',
   data: {
     labels: ["7/15/20", "10/15/20", "3/31/21", "7/31/21", "11/30/21", "2/28/22", "5/31/22", "8/31/22", "12/31/22"],
@@ -119,10 +119,16 @@ var myLineChart = new Chart(ctx, {
   }
 });
 
+function updateChart(xValues, yValues) {
+  ctxCH.data.labels = xValues
+  ctxCH.data.datasets[0].data = yValues
+  ctxCH.update()
+}
+
 
 // Area Chart Example
-var ctx = document.getElementById("myAreaChart1");
-var myLineChart = new Chart(ctx, {
+var ctxCH1 = document.getElementById("myAreaChart1");
+var myLineChart = new Chart(ctxCH1, {
   type: 'line',
   data: {
     labels: ["7/15/20", "10/15/20", "3/31/21", "7/31/21", "11/30/21", "2/28/22", "5/31/22", "8/31/22", "12/31/22"],
@@ -243,8 +249,8 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 }
 
 // Bar Chart Example
-var ctx = document.getElementById("myBarChart1");
-var myBarChart = new Chart(ctx, {
+var ctxBAR = document.getElementById("myBarChart1");
+var myBarChart = new Chart(ctxBAR, {
   type: 'bar',
   data: {
     labels: ["Google Desktop", "Google Mobile", "Bing", "Yahoo"],
@@ -261,8 +267,9 @@ var myBarChart = new Chart(ctx, {
         '#8E4400',
         '#008CD2',
         '#DB81FF',
-      ],
-      data: [278, 281, 278, 216]
+      ]
+      // ,
+      // data: [278, 281, 278, 216]
     }],
   },
   options: {
@@ -334,14 +341,19 @@ var myBarChart = new Chart(ctx, {
   }
 });
 
+function updateChart(yValues) {
+  ctxBAR.data.datasets[0].data = yValues
+  ctxBAR.update()
+}
+
 /*PIE CHART*/
-// Set new default font family and font color to mimic Bootstrap's default styling
-Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+// Set new default font family and font color 
+Chart.defaults.global.defaultFontFamily = 'SFPROREG';
 Chart.defaults.global.defaultFontColor = '#858796';
 
 // Pie Chart Example
-var ctx = document.getElementById("myPieChart1");
-var myPieChart = new Chart(ctx, {
+var ctxPIE1 = document.getElementById("myPieChart1");
+var myPieChart = new Chart(ctxPIE1, {
   type: 'doughnut',
   data: {
     labels: ["Google Desktop", "Google Mobile", "Bing", "Yahoo"],

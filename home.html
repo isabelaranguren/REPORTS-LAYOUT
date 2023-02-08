@@ -23,7 +23,15 @@
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/danfojs@1.1.2/lib/bundle.min.js"></script>
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-
+    <py-env>
+        - numpy
+        - pandas
+        - ftplib
+        - paths:
+            - server_RK.py
+            - ABBA_TEST.csv
+            
+      </py-env>
 
 </head>
 
@@ -252,15 +260,7 @@
                                         <div class="col mr-2"style = "font-family: SFPROBOLD;">
                                             <div  class="text-xs font-weight-bold text-primary text-uppercase mb-1" style = "font-family: SFPROBOLD;">
                                                 Keywords Analyzed</div>
-                                                <py-env>
-                                                    - matplotlib
-                                                    - numpy
-                                                    - pandas
-                                                    - paths:
-                                                        - server_RK.py
-                                                        - ABBA_TEST.csv
-                                                        
-                                                  </py-env>
+                                                
                                                   <py-script>
                                                     import pandas as pd
                                                     import numpy as np
@@ -402,6 +402,8 @@
                                 <div class="card-body">
                                         <div class="chart-bar">
                                             <canvas id="myBarChart1"></canvas>
+                                           
+                                              <py-script src="js/demo/change_Graph.py"> </py-script>
                                         </div>
                                     
                                 </div>
@@ -601,15 +603,7 @@ $(document).ready(function() {
                                       <th scope="col">Previous</th>
                                       <th  scope="col">Difference</th>
                                       <th  scope="col">Note</th>
-                                      <py-env>
-                                        - matplotlib
-                                        - numpy
-                                        - pandas
-                                        - paths:
-                                            - server_RK.py
-                                            - ABBA_TEST.csv
-                                            
-                                      </py-env>
+                                     
                                                 </tr>
                                             </tfoot>
                                             <tbody id = "ROWS">
@@ -748,15 +742,7 @@ $(document).ready(function() {
                                       <th scope="col">Previous</th>
                                       <th  scope="col">Difference</th>
                                       <th scope="col">Note</th>
-                                      <py-env>
-                                        - matplotlib
-                                        - numpy
-                                        - pandas
-                                        - paths:
-                                            - server_RK.py
-                                            - ABBA_TEST.csv
-                                            
-                                      </py-env>
+                                      
                                                 </tr>
                                             </tfoot>
                                             <tbody id = "ROWS1">
@@ -900,15 +886,7 @@ $('#dataTable2').DataTable({
                                   <th scope="col">Previous</th>
                                   <th  scope="col">Difference</th>
                                   <th  scope="col">Note</th>
-                                  <py-env>
-                                    - matplotlib
-                                    - numpy
-                                    - pandas
-                                    - paths:
-                                        - server_RK.py
-                                        - ABBA_TEST.csv
-                                        
-                                  </py-env>
+                                 
                                             </tr>
                                         </tfoot>
                                         <tbody id = "ROWS2">
@@ -1044,15 +1022,7 @@ $('#dataTable3').DataTable({
                                   <th scope="col">Previous</th>
                                   <th  scope="col">Difference</th>
                                   <th scope="col">Note</th>
-                                  <py-env>
-                                    - matplotlib
-                                    - numpy
-                                    - pandas
-                                    - paths:
-                                        - server_RK.py
-                                        - ABBA_TEST.csv
-                                        
-                                  </py-env>
+                                 
                                             </tr>
                                         </tfoot>
                                         <tbody id = "ROWS3">
