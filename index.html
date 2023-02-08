@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" style = "font-family: SFPROBOLD">
+<html lang="en" style="font-family: SFPROBOLD">
 
-<head >
+<head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,14 +20,18 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link href="css/sb-admin-2.css" rel="stylesheet">
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/danfojs@1.1.2/lib/bundle.min.js"></script>
-    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script>
 
 
+    
 </head>
 
 <body id="page-top">
+    
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -49,14 +53,14 @@
             <li class="nav-item active">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span style = "font-family: SFPROBOLD;">Actual SEO Data </span></a>
+                    <span style="font-family: SFPROBOLD;">Actual SEO Data </span></a>
             </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
 
             <!-- Heading -->
-            <div class="sidebar-heading" style = "font-family: SFPROBOLD;">
+            <div class="sidebar-heading" style="font-family: SFPROBOLD;">
                 Dashboard
             </div>
 
@@ -64,14 +68,14 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog" ></i>
-                    <span style = "font-family: SFPROBOLD;">Current Report Data</span>
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span style="font-family: SFPROBOLD;">Current Report Data</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" style = "font-family: SFPROREG;" href="index.html">Summary</a>
-                        <a class="collapse-item" style = "font-family: SFPROREG;" href="cards.html">SERP Positions</a>
-                        <a class="collapse-item" style = "font-family: SFPROREG;"href="cards.html">Keywords</a>
+                        <a class="collapse-item" style="font-family: SFPROREG;" href="index.html">Summary</a>
+                        <a class="collapse-item" style="font-family: SFPROREG;" href="cards.html">SERP Positions</a>
+                        <a class="collapse-item" style="font-family: SFPROREG;" href="cards.html">Keywords</a>
                     </div>
                 </div>
             </li>
@@ -80,13 +84,13 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span style = "font-family: SFPROBOLD;">Previous Report Data</span>
+                    <span style="font-family: SFPROBOLD;">Previous Report Data</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" style = "font-family: SFPROREG;" href="index.html">Summary</a>
-                        <a class="collapse-item" style = "font-family: SFPROREG;" href="cards.html">SERP Positions</a>
-                        <a class="collapse-item" style = "font-family: SFPROREG;" href="cards.html">Keywords</a>
+                        <a class="collapse-item" style="font-family: SFPROREG;" href="index.html">Summary</a>
+                        <a class="collapse-item" style="font-family: SFPROREG;" href="cards.html">SERP Positions</a>
+                        <a class="collapse-item" style="font-family: SFPROREG;" href="cards.html">Keywords</a>
                     </div>
                 </div>
             </li>
@@ -95,13 +99,13 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span style = "font-family: SFPROBOLD;">Baseline Report</span>
+                    <span style="font-family: SFPROBOLD;">Baseline Report</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" style = "font-family: SFPROREG;" href="index.html">Summary</a>
-                        <a class="collapse-item" style = "font-family: SFPROREG;" href="cards.html">SERP Positions</a>
-                        <a class="collapse-item" style = "font-family: SFPROREG;" href="cards.html">Keywords</a>
+                        <a class="collapse-item" style="font-family: SFPROREG;" href="index.html">Summary</a>
+                        <a class="collapse-item" style="font-family: SFPROREG;" href="cards.html">SERP Positions</a>
+                        <a class="collapse-item" style="font-family: SFPROREG;" href="cards.html">Keywords</a>
 
                     </div>
                 </div>
@@ -121,10 +125,11 @@
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header" style = "font-family: SFPROBOLD;">Custom Utilities:</h6>
-                        <a class="collapse-item" style = "font-family: SFPROREG;"href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" style = "font-family: SFPROREG;" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" style = "font-family: SFPROREG;" href="utilities-animation.html">Animations</a>
+                        <h6 class="collapse-header" style="font-family: SFPROBOLD;">Custom Utilities:</h6>
+                        <a class="collapse-item" style="font-family: SFPROREG;" href="utilities-color.html">Colors</a>
+                        <a class="collapse-item" style="font-family: SFPROREG;" href="utilities-border.html">Borders</a>
+                        <a class="collapse-item" style="font-family: SFPROREG;"
+                            href="utilities-animation.html">Animations</a>
                         <a class="collapse-item" href="utilities-other.html">Other</a>
                     </div>
                 </div>
@@ -396,89 +401,95 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class = "header" style = "background-color:#a9c2e37c;width: 100%; margin: auto; margin-top: -25px; border-radius: .35rem;   
-                    padding: 2em; margin-bottom: 2em; display: flex; justify-content: center; opacity: .8;">            
-                        <img src="img/ASMheaderlogo2.png" style ="width: 30em;">
-                        </div>
-                       
-            <div class="container-fluid">          
-                               
-
-            
-                <!-- Page Heading -->          
-                <div class="d-sm-flex align-items-center justify-content-between mb-4">   
-                    <h1 class="h3 mb-0 text-gray-800" style = "font-family: SFPROBOLD;">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" style = "font-family: SFPROREG;">
-                            
-                            <i
-                                class="fas fa-download fa-sm text-white-50" ></i> Generate Report</a>
+                <div class="header" style="background-color:#a9c2e37c;width: 100%; margin: auto; margin-top: -25px; border-radius: .35rem;   
+                    padding: 2em; margin-bottom: 2em; display: flex; justify-content: center; opacity: .8;">
+                    <img src="img/ASMheaderlogo2.png" style="width: 30em;">
                 </div>
-                    
-                    
-                    
+
+                <div class="container-fluid">
+
+
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800" style="font-family: SFPROBOLD;">Dashboard</h1>
+                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
+                            style="font-family: SFPROREG;">
+
+                            <i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                    </div>
+
+
+
                     <!-- Content Row -->
                     <div class="row">
-                       
+
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body" style = "font-family: SFPROBOLD;">
-                                    <div class="row no-gutters align-items-center"style = "font-family: SFPROBOLD;">
-                                        <div class="col mr-2"style = "font-family: SFPROBOLD;">
-                                            <div  class="text-xs font-weight-bold text-primary text-uppercase mb-1" style = "font-family: SFPROBOLD;">
+                                <div class="card-body" style="font-family: SFPROBOLD;">
+                                    <div class="row no-gutters align-items-center" style="font-family: SFPROBOLD;">
+                                        <div class="col mr-2" style="font-family: SFPROBOLD;">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"
+                                                style="font-family: SFPROBOLD;">
                                                 Keywords Analyzed</div>
-                                                <py-env>
-                                                    - matplotlib
-                                                    - numpy
-                                                    - pandas
-                                                    - paths:
-                                                        - server_RK.py
-                                                        - ABBA_TEST.csv
-                                                        
-                                                  </py-env>
-                                                  <py-script>
-                                                    import pandas as pd
-                                                    import numpy as np
-                                                    import server_RK as srk
-                                                    from pyodide import create_proxy
-                                                    GHR = 'Google HOU Rank'
-                                                    KW = 'Keyword'
-                                                    VSBY = 'Visibility'
-                                                    GHD = 'Google HOU Difference'
-                                                    GP = 'Google Previous'
-                                                    GMHR = 'Google Mobile HOU Rank'
-                                                    KW = 'Keyword'
-                                                    VSBY = 'Visibility'
-                                                    GMHD = 'Google Mobile HOU Difference'
-                                                    GMP = 'Google Mobile HOU Previous'
-                                                    BNGR = 'Bing US Rank'
-                                                    KW = 'Keyword'
-                                                    VSBY = 'Visibility'
-                                                    BNGDF = "Bing US Difference"
-                                                    BNGP = 'Bing US Previous'
-                                                    YAHR = 'Yahoo! Rank'
-                                                    KW = 'Keyword'
-                                                    VSBY = 'Visibility'
-                                                    YAHDIF = "Yahoo! Difference"
-                                                    YAHP = 'Yahoo! Previous'
-                                                    SE = "SE"
-                                                    NOTE = "NOTE"
-                                                    GMHR = 'Google Mobile HOU Rank'
-                                                    GMHD = 'Google Mobile HOU Difference'
-                                                    RP = 'Ranking pages'
-                                                    REPORT_NAME = ['Google Report', 'Google Mobile Report', 'Bing Report', 'Yahoo! Report']
-                                                    COLUMN_NAME = ['Keyword', 'Ranking pages', 'Google HOU Rank', 'Google Previous', 'Google HOU Difference', 'NOTE']
-                                                    frame_data = srk.FIND_FRAME("ABBA_TEST.csv")
-                                                    GOD = frame_data[0]
-                                                    GOD_NAME = REPORT_NAME[0]
-                                                    KEY_PARENT = Element("KEY_WORD")
-                                                    KEY_PARENT.clear()
-                                                    KEY_PARENT.element.innerHTML = str(len(GOD))
-                                                     
-                                                 
-                                        
-                                                                      </py-script>
-                                            <div id = "KEY_WORD" class="h5 mb-0 font-weight-bold text-gray-800"style = "font-family: SFPROBOLD;">Loading..</div>
+                                            <py-env>
+                                                - matplotlib
+                                                - numpy
+                                                - pandas
+                                                - paths:
+                                                - server_RK.py
+                                                - ABBA_TEST.csv
+                                                - data.py
+
+                                            </py-env>
+                                            <py-script>
+                                                import pandas as pd
+                                                import numpy as np
+                                                import server_RK as srk
+                                                from pyodide import create_proxy
+                                                GHR = 'Google HOU Rank'
+                                                KW = 'Keyword'
+                                                VSBY = 'Visibility'
+                                                GHD = 'Google HOU Difference'
+                                                GP = 'Google Previous'
+                                                GMHR = 'Google Mobile HOU Rank'
+                                                KW = 'Keyword'
+                                                VSBY = 'Visibility'
+                                                GMHD = 'Google Mobile HOU Difference'
+                                                GMP = 'Google Mobile HOU Previous'
+                                                BNGR = 'Bing US Rank'
+                                                KW = 'Keyword'
+                                                VSBY = 'Visibility'
+                                                BNGDF = "Bing US Difference"
+                                                BNGP = 'Bing US Previous'
+                                                YAHR = 'Yahoo! Rank'
+                                                KW = 'Keyword'
+                                                VSBY = 'Visibility'
+                                                YAHDIF = "Yahoo! Difference"
+                                                YAHP = 'Yahoo! Previous'
+                                                SE = "SE"
+                                                NOTE = "NOTE"
+                                                GMHR = 'Google Mobile HOU Rank'
+                                                GMHD = 'Google Mobile HOU Difference'
+                                                RP = 'Ranking pages'
+                                                REPORT_NAME = ['Google Report', 'Google Mobile Report', 'Bing Report',
+                                                'Yahoo! Report']
+                                                COLUMN_NAME = ['Keyword', 'Ranking pages', 'Google HOU Rank', 'Google
+                                                Previous', 'Google HOU Difference', 'NOTE']
+                                                frame_data = srk.FIND_FRAME("ABBA_TEST.csv")
+                                                GOD = frame_data[0]
+                                                GOD_NAME = REPORT_NAME[0]
+                                                KEY_PARENT = Element("KEY_WORD")
+                                                KEY_PARENT.clear()
+                                                KEY_PARENT.element.innerHTML = str(len(GOD))
+                                                int_df = bar_array
+
+
+
+                                            </py-script>
+                                            <div id="KEY_WORD" class="h5 mb-0 font-weight-bold text-gray-800"
+                                                style="font-family: SFPROBOLD;">Loading..</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-code fa-2x text-gray-300"></i>
@@ -494,9 +505,11 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1" style = "font-family: SFPROBOLD;">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1"
+                                                style="font-family: SFPROBOLD;">
                                                 Report Created</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"style = "font-family: SFPROBOLD;"> 1/2/2023</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"
+                                                style="font-family: SFPROBOLD;"> 1/2/2023</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-book fa-2x text-gray-300"></i>
@@ -512,9 +525,11 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1" style = "font-family: SFPROBOLD;" >
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1"
+                                                style="font-family: SFPROBOLD;">
                                                 Geographic Target</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800" style = "font-family: SFPROBOLD;"> Local</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"
+                                                style="font-family: SFPROBOLD;"> Local</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-search fa-2x text-gray-300"></i>
@@ -529,9 +544,11 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1" style = "font-family: SFPROBOLD;">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1"
+                                                style="font-family: SFPROBOLD;">
                                                 Services</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800" style = "font-family: SFPROBOLD;"> SEO</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"
+                                                style="font-family: SFPROBOLD;"> SEO</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-comments fa-2x text-gray-300"></i>
@@ -552,13 +569,20 @@
                             <!-- Project Card Example -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary" style = "font-family: SFPROBOLD;">Search Engine Listings</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary" style="font-family: SFPROBOLD;">Search
+                                        Engine Listings</h6>
                                 </div>
                                 <div class="card-body">
-                                        <div class="chart-bar">
-                                            <canvas id="myBarChart1"></canvas>
-                                        </div>
-                                    
+                                    <div class="chart-bar">
+                                        <canvas id="myBarChart1"></canvas>
+                                    </div class="chart-bar">
+                                    <div>
+                                        <canvas id ="barxchart"></canvas>
+                                    </div>
+
+
+
+
                                 </div>
                             </div>
                         </div>
@@ -569,10 +593,10 @@
                             <div class="card shadow mb-4">
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary" style = "font-family: SFPROBOLD;">
-                                        Active Keywords Tracked     
+                                    <h6 class="m-0 font-weight-bold text-primary" style="font-family: SFPROBOLD;">
+                                        Active Keywords Tracked
                                     </h6>
-                                    
+
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -619,10 +643,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                    <!-- Card Body -->
+                                <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="chart-area">
-                                    <canvas id="myAreaChart1"></canvas>
+                                        <canvas id="myAreaChart1"></canvas>
 
 
 
@@ -630,549 +654,566 @@
                                 </div>
                             </div>
                         </div>
-                    
-                            <!-- Card Body -->
-                        <div class ="col-lg-6 mb-4">
-                                <!-- Pie Chart -->
-                        
-                                <div class="card shadow mb-4">
-                                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                        <h6 class="m-0 font-weight-bold text-primary">Top Map Rankings     
-                                        </h6>
-                                        <div class="dropdown no-arrow">
-                                            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                                aria-labelledby="dropdownMenuLink">
-                                                <div class="dropdown-header">Dropdown Header:</div>
-                                                <a class="dropdown-item" href="#">Action</a>
-                                                <a class="dropdown-item" href="#">Another action</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a class="dropdown-item" href="#">Something else here</a>
-                                            </div>
+
+                        <!-- Card Body -->
+                        <div class="col-lg-6 mb-4">
+                            <!-- Pie Chart -->
+
+                            <div class="card shadow mb-4">
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Top Map Rankings
+                                    </h6>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                            aria-labelledby="dropdownMenuLink">
+                                            <div class="dropdown-header">Dropdown Header:</div>
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Something else here</a>
                                         </div>
                                     </div>
-      <!-- Card Body -->
-      <div class="card-body">
-        <div class="chart-pie pt-4 pb-2">
-            <canvas id="myPieChart1"></canvas>
-        </div>
-        <div class="mt-4 text-center small">
-            <span class="mr-2">
-                <i class="fas fa-circle text-primary"></i> Google Desktop
-            </span>
-            <span class="mr-2">
-                <i class="fas fa-circle text-success"></i> Google Mobile
-            </span>
-            <span class="mr-2">
-                <i class="fas fa-circle text-info"></i> Bing
-            </span>
-            <span class="mr-2">
-                <i class="fas fa-circle text-info"></i> Yahoo
-            </span>
-        </div>
-    </div>
-    </div>
-                    </div>
-                    
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="chart-pie pt-4 pb-2">
+                                        <canvas id="myPieChart1"></canvas>
+                                    </div>
+                                    <div class="mt-4 text-center small">
+                                        <span class="mr-2">
+                                            <i class="fas fa-circle text-primary"></i> Google Desktop
+                                        </span>
+                                        <span class="mr-2">
+                                            <i class="fas fa-circle text-success"></i> Google Mobile
+                                        </span>
+                                        <span class="mr-2">
+                                            <i class="fas fa-circle text-info"></i> Bing
+                                        </span>
+                                        <span class="mr-2">
+                                            <i class="fas fa-circle text-info"></i> Yahoo
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                    <!-- Content Row -->
+
+                        <!-- Content Row -->
 
                         <div class="col-lg-6 mb-4">
                             <div class="card shadow mb-4">
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary" style = "font-family: SFPROBOLD">Google Reports</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary" style="font-family: SFPROBOLD">Google
+                                        Reports</h6>
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
                                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                             <script>
-                                               // Call the dataTables jQuery plugin
-$(document).ready(function() {
-    $('#dataTable').DataTable({
-      "scrollY": "500px",
-      "scrollCollapse": true,
-      "paging": false
-    });
-  
-    
-  });
-  
-                                                
+                                                // Call the dataTables jQuery plugin
+                                                $(document).ready(function () {
+                                                    $('#dataTable').DataTable({
+                                                        "scrollY": "500px",
+                                                        "scrollCollapse": true,
+                                                        "paging": false
+                                                    });
+
+
+                                                });
+
+
                                             </script>
-                                            <thead style = "font-family: SFPROBOLD">
-                                                <tr style = "font-family: SFPROBOLD">
-                                                    <th id = "Keyword" >Keyword</th>
-                                                    <th id = "RK" >Ranking Pages</th>
-                                                    <th id = "Rank">Rank</th>
-                                                    <th id = "Previous">Previous</th>
-                                                    <th id = "Difference" >Difference</th>
-                                                    <th id = "NO_TE" >Note</th>
-                      
+                                            <thead style="font-family: SFPROBOLD">
+                                                <tr style="font-family: SFPROBOLD">
+                                                    <th id="Keyword">Keyword</th>
+                                                    <th id="RK">Ranking Pages</th>
+                                                    <th id="Rank">Rank</th>
+                                                    <th id="Previous">Previous</th>
+                                                    <th id="Difference">Difference</th>
+                                                    <th id="NO_TE">Note</th>
+
                                                 </tr>
                                             </thead>
                                             <tfoot>
-                                                <tr style = "font-family: SFPROBOLD">
-                                      <th scope="col">Keyword</th>
-                                      <th scope="col">Ranking Pages</th>
-                                      <th scope="col">Rank</th>
-                                      <th scope="col">Previous</th>
-                                      <th  scope="col">Difference</th>
-                                      <th  scope="col">Note</th>
-                                      <py-env>
-                                        - matplotlib
-                                        - numpy
-                                        - pandas
-                                        - paths:
-                                            - server_RK.py
-                                            - ABBA_TEST.csv
-                                            
-                                      </py-env>
+                                                <tr style="font-family: SFPROBOLD">
+                                                    <th scope="col">Keyword</th>
+                                                    <th scope="col">Ranking Pages</th>
+                                                    <th scope="col">Rank</th>
+                                                    <th scope="col">Previous</th>
+                                                    <th scope="col">Difference</th>
+                                                    <th scope="col">Note</th>
+                                                    <py-env>
+                                                        - matplotlib
+                                                        - numpy
+                                                        - pandas
+                                                        - paths:
+                                                        - server_RK.py
+                                                        - ABBA_TEST.csv
+
+                                                    </py-env>
                                                 </tr>
                                             </tfoot>
-                                            <tbody id = "ROWS">
+                                            <tbody id="ROWS">
                                                 <py-script>
-        import pandas as pd
-        import numpy as np
-        import server_RK as srk
-        from pyodide import create_proxy
-        GHR = 'Google HOU Rank'
-        KW = 'Keyword'
-        VSBY = 'Visibility'
-        GHD = 'Google HOU Difference'
-        GP = 'Google Previous'
-        GMHR = 'Google Mobile HOU Rank'
-        KW = 'Keyword'
-        VSBY = 'Visibility'
-        GMHD = 'Google Mobile HOU Difference'
-        GMP = 'Google Mobile HOU Previous'
-        BNGR = 'Bing US Rank'
-        KW = 'Keyword'
-        VSBY = 'Visibility'
-        BNGDF = "Bing US Difference"
-        BNGP = 'Bing US Previous'
-        YAHR = 'Yahoo! Rank'
-        KW = 'Keyword'
-        VSBY = 'Visibility'
-        YAHDIF = "Yahoo! Difference"
-        YAHP = 'Yahoo! Previous'
-        SE = "SE"
-        NOTE = "NOTE"
-        GMHR = 'Google Mobile HOU Rank'
-        GMHD = 'Google Mobile HOU Difference'
-        RP = 'Ranking pages'
-        REPORT_NAME = ['Google Report', 'Google Mobile Report', 'Bing Report', 'Yahoo! Report']
-        COLUMN_NAME = ['Keyword', 'Ranking pages', 'Google HOU Rank', 'Google Previous', 'Google HOU Difference', 'NOTE']
-        frame_data = srk.FIND_FRAME("ABBA_TEST.csv")
-        GOD = frame_data[0]
-        GOD_NAME = REPORT_NAME[0]
-        for i in range(len(frame_data[0])):
-         CHILD = document.createElement("tr")
-         CHILD.style.fontFamily = "SFPROREG"
-         parent = document.querySelector("#ROWS")
-         parent.appendChild(CHILD)
-         for r in range(6):
-          LAST_CHILD = document.createElement("td")
-          DF_GOD = pd.DataFrame(data=GOD)
-          LAST_CHILD.style.fontFamily = "SFPROREG"
+                                                    import pandas as pd
+                                                    import numpy as np
+                                                    import server_RK as srk
+                                                    from pyodide import create_proxy
+                                                    GHR = 'Google HOU Rank'
+                                                    KW = 'Keyword'
+                                                    VSBY = 'Visibility'
+                                                    GHD = 'Google HOU Difference'
+                                                    GP = 'Google Previous'
+                                                    GMHR = 'Google Mobile HOU Rank'
+                                                    KW = 'Keyword'
+                                                    VSBY = 'Visibility'
+                                                    GMHD = 'Google Mobile HOU Difference'
+                                                    GMP = 'Google Mobile HOU Previous'
+                                                    BNGR = 'Bing US Rank'
+                                                    KW = 'Keyword'
+                                                    VSBY = 'Visibility'
+                                                    BNGDF = "Bing US Difference"
+                                                    BNGP = 'Bing US Previous'
+                                                    YAHR = 'Yahoo! Rank'
+                                                    KW = 'Keyword'
+                                                    VSBY = 'Visibility'
+                                                    YAHDIF = "Yahoo! Difference"
+                                                    YAHP = 'Yahoo! Previous'
+                                                    SE = "SE"
+                                                    NOTE = "NOTE"
+                                                    GMHR = 'Google Mobile HOU Rank'
+                                                    GMHD = 'Google Mobile HOU Difference'
+                                                    RP = 'Ranking pages'
+                                                    REPORT_NAME = ['Google Report', 'Google Mobile Report', 'Bing
+                                                    Report', 'Yahoo! Report']
+                                                    COLUMN_NAME = ['Keyword', 'Ranking pages', 'Google HOU Rank',
+                                                    'Google Previous', 'Google HOU Difference', 'NOTE']
+                                                    frame_data = srk.FIND_FRAME("ABBA_TEST.csv")
+                                                    GOD = frame_data[0]
+                                                    GOD_NAME = REPORT_NAME[0]
+                                                    for i in range(len(frame_data[0])):
+                                                    CHILD = document.createElement("tr")
+                                                    CHILD.style.fontFamily = "SFPROREG"
+                                                    parent = document.querySelector("#ROWS")
+                                                    parent.appendChild(CHILD)
+                                                    for r in range(6):
+                                                    LAST_CHILD = document.createElement("td")
+                                                    DF_GOD = pd.DataFrame(data=GOD)
+                                                    LAST_CHILD.style.fontFamily = "SFPROREG"
 
-          LAST_CHILD.innerHTML = DF_GOD[COLUMN_NAME[r]][i]
-          CHILD.appendChild(LAST_CHILD)
-          
-        
-        
-        
-        
-        
-        
-        
-        
-        
-                          </py-script>
+                                                    LAST_CHILD.innerHTML = DF_GOD[COLUMN_NAME[r]][i]
+                                                    CHILD.appendChild(LAST_CHILD)
+
+
+
+
+
+
+
+
+
+
+                                                </py-script>
                                             </tbody>
                                         </table>
                                     </div>
                                 </div>
                             </div>
-        
+
                         </div>
                         <!-- /.container-fluid -->
-                        <div class ="col-lg-6 mb-4">
+                        <div class="col-lg-6 mb-4">
                             <!-- Pie Chart -->
-                    
+
                             <div class="card shadow mb-4">
-                                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary" style = "font-family: SFPROBOLD">Google Mobile Reports</h6>
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary" style="font-family: SFPROBOLD">Google
+                                        Mobile Reports</h6>
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
-                                        <table class="table table-bordered" id="dataTable1" width="100%" cellspacing="0">
+                                        <table class="table table-bordered" id="dataTable1" width="100%"
+                                            cellspacing="0">
                                             <script>
-                                               // Call the dataTables jQuery plugin
-    $(document).ready(function() {
-    $('#dataTable1').DataTable({
-      "scrollY": "500px",
-      "scrollCollapse": true,
-      "paging": false
-    });
-    
-    
-    });
-    
-                                                
+                                                // Call the dataTables jQuery plugin
+                                                $(document).ready(function () {
+                                                    $('#dataTable1').DataTable({
+                                                        "scrollY": "500px",
+                                                        "scrollCollapse": true,
+                                                        "paging": false
+                                                    });
+
+
+                                                });
+
+
                                             </script>
-                                            <thead style = "font-family: SFPROBOLD">
-                                                <tr style = "font-family: SFPROBOLD">
-                                                    <th id = "Keyword1" >Keyword</th>
-                                                    <th id = "RK1" >Ranking Pages</th>
-                                                    <th id = "Rank1">Rank</th>
-                                                    <th id = "Previous1">Previous</th>
-                                                    <th id = "Difference1" >Difference</th>
-                                                    <th id = "NO_TE1" >Note</th>
-                      
+                                            <thead style="font-family: SFPROBOLD">
+                                                <tr style="font-family: SFPROBOLD">
+                                                    <th id="Keyword1">Keyword</th>
+                                                    <th id="RK1">Ranking Pages</th>
+                                                    <th id="Rank1">Rank</th>
+                                                    <th id="Previous1">Previous</th>
+                                                    <th id="Difference1">Difference</th>
+                                                    <th id="NO_TE1">Note</th>
+
                                                 </tr>
                                             </thead>
                                             <tfoot>
-                                                <tr style = "font-family: SFPROBOLD">
-                                      <th scope="col">Keyword</th>
-                                      <th scope="col">Ranking Pages</th>
-                                      <th scope="col">Rank</th>
-                                      <th scope="col">Previous</th>
-                                      <th  scope="col">Difference</th>
-                                      <th scope="col">Note</th>
-                                      <py-env>
-                                        - matplotlib
-                                        - numpy
-                                        - pandas
-                                        - paths:
-                                            - server_RK.py
-                                            - ABBA_TEST.csv
-                                            
-                                      </py-env>
+                                                <tr style="font-family: SFPROBOLD">
+                                                    <th scope="col">Keyword</th>
+                                                    <th scope="col">Ranking Pages</th>
+                                                    <th scope="col">Rank</th>
+                                                    <th scope="col">Previous</th>
+                                                    <th scope="col">Difference</th>
+                                                    <th scope="col">Note</th>
+                                                    <py-env>
+                                                        - matplotlib
+                                                        - numpy
+                                                        - pandas
+                                                        - paths:
+                                                        - server_RK.py
+                                                        - ABBA_TEST.csv
+
+                                                    </py-env>
                                                 </tr>
                                             </tfoot>
-                                            <tbody id = "ROWS1">
+                                            <tbody id="ROWS1">
                                                 <py-script>
-        import pandas as pd
-        import numpy as np
-        import server_RK as srk
-        from pyodide import create_proxy
-        GHR = 'Google HOU Rank'
-        KW = 'Keyword'
-        VSBY = 'Visibility'
-        GHD = 'Google HOU Difference'
-        GP = 'Google Previous'
-        GMHR = 'Google Mobile HOU Rank'
-        KW = 'Keyword'
-        VSBY = 'Visibility'
-        GMHD = 'Google Mobile HOU Difference'
-        GMP = 'Google Mobile HOU Previous'
-        BNGR = 'Bing US Rank'
-        KW = 'Keyword'
-        VSBY = 'Visibility'
-        BNGDF = "Bing US Difference"
-        BNGP = 'Bing US Previous'
-        YAHR = 'Yahoo! Rank'
-        KW = 'Keyword'
-        VSBY = 'Visibility'
-        YAHDIF = "Yahoo! Difference"
-        YAHP = 'Yahoo! Previous'
-        SE = "SE"
-        NOTE = "NOTE"
-        GMHR = 'Google Mobile HOU Rank'
-        GMHD = 'Google Mobile HOU Difference'
-        RP = 'Ranking pages'
-        REPORT_NAME = ['Google Report', 'Google Mobile Report', 'Bing Report', 'Yahoo! Report']
-        COLUMN_NAME = ['Keyword', 'Ranking pages', GMHR, GMP , GMHD, 'NOTE']
-        frame_data = srk.FIND_FRAME("ABBA_TEST.csv")
-        GOM = frame_data[1]
-        GOM_NAME = REPORT_NAME[1]
-        for i in range(len(frame_data[1])):
-         CHILD = document.createElement("tr")
-         CHILD.style.fontFamily = "SFPROREG"
-         parent = document.querySelector("#ROWS1")
-         parent.appendChild(CHILD)
-         for r in range(6):
-          LAST_CHILD = document.createElement("td")
-          DF_GOM = pd.DataFrame(data=GOM)
-          LAST_CHILD.style.fontFamily = "SFPROREG"
-    
-          LAST_CHILD.innerHTML = DF_GOM[COLUMN_NAME[r]][i]
-          CHILD.appendChild(LAST_CHILD)
-          
-        
-        
-        
-        
-        
-        
-        
-        
-        
-                          </py-script>
+                                                    import pandas as pd
+                                                    import numpy as np
+                                                    import server_RK as srk
+                                                    from pyodide import create_proxy
+                                                    GHR = 'Google HOU Rank'
+                                                    KW = 'Keyword'
+                                                    VSBY = 'Visibility'
+                                                    GHD = 'Google HOU Difference'
+                                                    GP = 'Google Previous'
+                                                    GMHR = 'Google Mobile HOU Rank'
+                                                    KW = 'Keyword'
+                                                    VSBY = 'Visibility'
+                                                    GMHD = 'Google Mobile HOU Difference'
+                                                    GMP = 'Google Mobile HOU Previous'
+                                                    BNGR = 'Bing US Rank'
+                                                    KW = 'Keyword'
+                                                    VSBY = 'Visibility'
+                                                    BNGDF = "Bing US Difference"
+                                                    BNGP = 'Bing US Previous'
+                                                    YAHR = 'Yahoo! Rank'
+                                                    KW = 'Keyword'
+                                                    VSBY = 'Visibility'
+                                                    YAHDIF = "Yahoo! Difference"
+                                                    YAHP = 'Yahoo! Previous'
+                                                    SE = "SE"
+                                                    NOTE = "NOTE"
+                                                    GMHR = 'Google Mobile HOU Rank'
+                                                    GMHD = 'Google Mobile HOU Difference'
+                                                    RP = 'Ranking pages'
+                                                    REPORT_NAME = ['Google Report', 'Google Mobile Report', 'Bing
+                                                    Report', 'Yahoo! Report']
+                                                    COLUMN_NAME = ['Keyword', 'Ranking pages', GMHR, GMP , GMHD, 'NOTE']
+                                                    frame_data = srk.FIND_FRAME("ABBA_TEST.csv")
+                                                    GOM = frame_data[1]
+                                                    GOM_NAME = REPORT_NAME[1]
+                                                    for i in range(len(frame_data[1])):
+                                                    CHILD = document.createElement("tr")
+                                                    CHILD.style.fontFamily = "SFPROREG"
+                                                    parent = document.querySelector("#ROWS1")
+                                                    parent.appendChild(CHILD)
+                                                    for r in range(6):
+                                                    LAST_CHILD = document.createElement("td")
+                                                    DF_GOM = pd.DataFrame(data=GOM)
+                                                    LAST_CHILD.style.fontFamily = "SFPROREG"
+
+                                                    LAST_CHILD.innerHTML = DF_GOM[COLUMN_NAME[r]][i]
+                                                    CHILD.appendChild(LAST_CHILD)
+
+
+
+
+
+
+
+
+
+
+                                                </py-script>
                                             </tbody>
                                         </table>
                                     </div>
                                 </div>
                             </div>
-        
+
                         </div>
                     </div>
 
-                    
-                   
+
+
                     <!-- End of Main Content -->
 
                     <!-- Content Row -->
                     <div class="row">
 
-                    <div class="col-lg-6 mb-4">
-                        <div class="card shadow mb-4">
-                            <div
-                                class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                <h6 class="m-0 font-weight-bold text-primary" style = "font-family: SFPROBOLD">Bing Reports</h6>
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table table-bordered" id="dataTable2" width="100%" cellspacing="0">
-                                        <script>
-                                           // Call the dataTables jQuery plugin
-$(document).ready(function() {
-$('#dataTable2').DataTable({
-  "scrollY": "500px",
-  "scrollCollapse": true,
-  "paging": false
-});
+                        <div class="col-lg-6 mb-4">
+                            <div class="card shadow mb-4">
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary" style="font-family: SFPROBOLD">Bing
+                                        Reports</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" id="dataTable2" width="100%"
+                                            cellspacing="0">
+                                            <script>
+                                                // Call the dataTables jQuery plugin
+                                                $(document).ready(function () {
+                                                    $('#dataTable2').DataTable({
+                                                        "scrollY": "500px",
+                                                        "scrollCollapse": true,
+                                                        "paging": false
+                                                    });
 
 
-});
+                                                });
 
-                                            
-                                        </script>
-                                        <thead style = "font-family: SFPROBOLD">
-                                            <tr style = "font-family: SFPROBOLD">
-                                                <th id = "Keyword" >Keyword</th>
-                                                <th id = "RK" >Ranking Pages</th>
-                                                <th id = "Rank">Rank</th>
-                                                <th id = "Previous">Previous</th>
-                                                <th id = "Difference" >Difference</th>
-                                                <th id = "NO_TE" >Note</th>
-                  
-                                            </tr>
-                                        </thead>
-                                        <tfoot>
-                                            <tr style = "font-family: SFPROBOLD">
-                                  <th scope="col">Keyword</th>
-                                  <th scope="col">Ranking Pages</th>
-                                  <th scope="col">Rank</th>
-                                  <th scope="col">Previous</th>
-                                  <th  scope="col">Difference</th>
-                                  <th  scope="col">Note</th>
-                                  <py-env>
-                                    - matplotlib
-                                    - numpy
-                                    - pandas
-                                    - paths:
-                                        - server_RK.py
-                                        - ABBA_TEST.csv
-                                        
-                                  </py-env>
-                                            </tr>
-                                        </tfoot>
-                                        <tbody id = "ROWS2">
-                                            <py-script>
-    import pandas as pd
-    import numpy as np
-    import server_RK as srk
-    from pyodide import create_proxy
-    GHR = 'Google HOU Rank'
-    KW = 'Keyword'
-    VSBY = 'Visibility'
-    GHD = 'Google HOU Difference'
-    GP = 'Google Previous'
-    GMHR = 'Google Mobile HOU Rank'
-    KW = 'Keyword'
-    VSBY = 'Visibility'
-    GMHD = 'Google Mobile HOU Difference'
-    GMP = 'Google Mobile HOU Previous'
-    BNGR = 'Bing US Rank'
-    KW = 'Keyword'
-    VSBY = 'Visibility'
-    BNGDF = "Bing US Difference"
-    BNGP = 'Bing US Previous'
-    YAHR = 'Yahoo! Rank'
-    KW = 'Keyword'
-    VSBY = 'Visibility'
-    YAHDIF = "Yahoo! Difference"
-    YAHP = 'Yahoo! Previous'
-    SE = "SE"
-    NOTE = "NOTE"
-    GMHR = 'Google Mobile HOU Rank'
-    GMHD = 'Google Mobile HOU Difference'
-    RP = 'Ranking pages'
-    REPORT_NAME = ['Google Report', 'Google Mobile Report', 'Bing Report', 'Yahoo! Report']
-    COLUMN_NAME = ['Keyword', 'Ranking pages', BNGR, BNGP, BNGDF, 'NOTE']
-    frame_data = srk.FIND_FRAME("ABBA_TEST.csv")
-    BNG = frame_data[2]
-    BNG_NAME = REPORT_NAME[2]
-    for i in range(len(frame_data[2])):
-     CHILD = document.createElement("tr")
-     CHILD.style.fontFamily = "SFPROREG"
-     parent = document.querySelector("#ROWS2")
-     parent.appendChild(CHILD)
-     for r in range(6):
-      LAST_CHILD = document.createElement("td")
-      DF_BNG = pd.DataFrame(data=BNG)
-      LAST_CHILD.style.fontFamily = "SFPROREG"
 
-      LAST_CHILD.innerHTML = DF_BNG[COLUMN_NAME[r]][i]
-      CHILD.appendChild(LAST_CHILD)
-      
-    
-    
-    
-    
-    
-    
-    
-    
-    
-                      </py-script>
-                                        </tbody>
-                                    </table>
+                                            </script>
+                                            <thead style="font-family: SFPROBOLD">
+                                                <tr style="font-family: SFPROBOLD">
+                                                    <th id="Keyword">Keyword</th>
+                                                    <th id="RK">Ranking Pages</th>
+                                                    <th id="Rank">Rank</th>
+                                                    <th id="Previous">Previous</th>
+                                                    <th id="Difference">Difference</th>
+                                                    <th id="NO_TE">Note</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr style="font-family: SFPROBOLD">
+                                                    <th scope="col">Keyword</th>
+                                                    <th scope="col">Ranking Pages</th>
+                                                    <th scope="col">Rank</th>
+                                                    <th scope="col">Previous</th>
+                                                    <th scope="col">Difference</th>
+                                                    <th scope="col">Note</th>
+                                                    <py-env>
+                                                        - matplotlib
+                                                        - numpy
+                                                        - pandas
+                                                        - paths:
+                                                        - server_RK.py
+                                                        - ABBA_TEST.csv
+
+                                                    </py-env>
+                                                </tr>
+                                            </tfoot>
+                                            <tbody id="ROWS2">
+                                                <py-script>
+                                                    import pandas as pd
+                                                    import numpy as np
+                                                    import server_RK as srk
+                                                    from pyodide import create_proxy
+                                                    GHR = 'Google HOU Rank'
+                                                    KW = 'Keyword'
+                                                    VSBY = 'Visibility'
+                                                    GHD = 'Google HOU Difference'
+                                                    GP = 'Google Previous'
+                                                    GMHR = 'Google Mobile HOU Rank'
+                                                    KW = 'Keyword'
+                                                    VSBY = 'Visibility'
+                                                    GMHD = 'Google Mobile HOU Difference'
+                                                    GMP = 'Google Mobile HOU Previous'
+                                                    BNGR = 'Bing US Rank'
+                                                    KW = 'Keyword'
+                                                    VSBY = 'Visibility'
+                                                    BNGDF = "Bing US Difference"
+                                                    BNGP = 'Bing US Previous'
+                                                    YAHR = 'Yahoo! Rank'
+                                                    KW = 'Keyword'
+                                                    VSBY = 'Visibility'
+                                                    YAHDIF = "Yahoo! Difference"
+                                                    YAHP = 'Yahoo! Previous'
+                                                    SE = "SE"
+                                                    NOTE = "NOTE"
+                                                    GMHR = 'Google Mobile HOU Rank'
+                                                    GMHD = 'Google Mobile HOU Difference'
+                                                    RP = 'Ranking pages'
+                                                    REPORT_NAME = ['Google Report', 'Google Mobile Report', 'Bing
+                                                    Report', 'Yahoo! Report']
+                                                    COLUMN_NAME = ['Keyword', 'Ranking pages', BNGR, BNGP, BNGDF,
+                                                    'NOTE']
+                                                    frame_data = srk.FIND_FRAME("ABBA_TEST.csv")
+                                                    BNG = frame_data[2]
+                                                    BNG_NAME = REPORT_NAME[2]
+                                                    for i in range(len(frame_data[2])):
+                                                    CHILD = document.createElement("tr")
+                                                    CHILD.style.fontFamily = "SFPROREG"
+                                                    parent = document.querySelector("#ROWS2")
+                                                    parent.appendChild(CHILD)
+                                                    for r in range(6):
+                                                    LAST_CHILD = document.createElement("td")
+                                                    DF_BNG = pd.DataFrame(data=BNG)
+                                                    LAST_CHILD.style.fontFamily = "SFPROREG"
+
+                                                    LAST_CHILD.innerHTML = DF_BNG[COLUMN_NAME[r]][i]
+                                                    CHILD.appendChild(LAST_CHILD)
+
+
+
+
+
+
+
+
+
+
+                                                </py-script>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
-    
-                    </div>
-                    <!-- /.container-fluid -->
-                    <div class ="col-lg-6 mb-4">
-                        <!-- Pie Chart -->
-                
-                        <div class="card shadow mb-4">
-                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                <h6 class="m-0 font-weight-bold text-primary" style = "font-family: SFPROBOLD">Yahoo Reports</h6>
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table table-bordered" id="dataTable3" width="100%" cellspacing="0">
-                                        <script>
-                                           // Call the dataTables jQuery plugin
-$(document).ready(function() {
-$('#dataTable3').DataTable({
-  "scrollY": "500px",
-  "scrollCollapse": true,
-  "paging": false
-});
+                        <!-- /.container-fluid -->
+                        <div class="col-lg-6 mb-4">
+                            <!-- Pie Chart -->
+
+                            <div class="card shadow mb-4">
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary" style="font-family: SFPROBOLD">Yahoo
+                                        Reports</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" id="dataTable3" width="100%"
+                                            cellspacing="0">
+                                            <script>
+                                                // Call the dataTables jQuery plugin
+                                                $(document).ready(function () {
+                                                    $('#dataTable3').DataTable({
+                                                        "scrollY": "500px",
+                                                        "scrollCollapse": true,
+                                                        "paging": false
+                                                    });
 
 
-});
+                                                });
 
-                                            
-                                        </script>
-                                        <thead style = "font-family: SFPROBOLD">
-                                            <tr style = "font-family: SFPROBOLD">
-                                                <th id = "Keyword1" >Keyword</th>
-                                                <th id = "RK1" >Ranking Pages</th>
-                                                <th id = "Rank1">Rank</th>
-                                                <th id = "Previous1">Previous</th>
-                                                <th id = "Difference1" >Difference</th>
-                                                <th id = "NO_TE1" >Note</th>
-                  
-                                            </tr>
-                                        </thead>
-                                        <tfoot>
-                                            <tr style = "font-family: SFPROBOLD">
-                                  <th scope="col">Keyword</th>
-                                  <th scope="col">Ranking Pages</th>
-                                  <th scope="col">Rank</th>
-                                  <th scope="col">Previous</th>
-                                  <th  scope="col">Difference</th>
-                                  <th scope="col">Note</th>
-                                  <py-env>
-                                    - matplotlib
-                                    - numpy
-                                    - pandas
-                                    - paths:
-                                        - server_RK.py
-                                        - ABBA_TEST.csv
-                                        
-                                  </py-env>
-                                            </tr>
-                                        </tfoot>
-                                        <tbody id = "ROWS3">
-                                            <py-script>
-    import pandas as pd
-    import numpy as np
-    import server_RK as srk
-    from pyodide import create_proxy
-    GHR = 'Google HOU Rank'
-    KW = 'Keyword'
-    VSBY = 'Visibility'
-    GHD = 'Google HOU Difference'
-    GP = 'Google Previous'
-    GMHR = 'Google Mobile HOU Rank'
-    KW = 'Keyword'
-    VSBY = 'Visibility'
-    GMHD = 'Google Mobile HOU Difference'
-    GMP = 'Google Mobile HOU Previous'
-    BNGR = 'Bing US Rank'
-    KW = 'Keyword'
-    VSBY = 'Visibility'
-    BNGDF = "Bing US Difference"
-    BNGP = 'Bing US Previous'
-    YAHR = 'Yahoo! Rank'
-    KW = 'Keyword'
-    VSBY = 'Visibility'
-    YAHDIF = "Yahoo! Difference"
-    YAHP = 'Yahoo! Previous'
-    SE = "SE"
-    NOTE = "NOTE"
-    GMHR = 'Google Mobile HOU Rank'
-    GMHD = 'Google Mobile HOU Difference'
-    RP = 'Ranking pages'
-    REPORT_NAME = ['Google Report', 'Google Mobile Report', 'Bing Report', 'Yahoo! Report']
-    COLUMN_NAME = ['Keyword', 'Ranking pages', YAHR, YAHP, YAHDIF, 'NOTE']
-    frame_data = srk.FIND_FRAME("ABBA_TEST.csv")
-    YAH = frame_data[3]
-    YAH_NAME = REPORT_NAME[3]
-    for i in range(len(frame_data[3])):
-     CHILD = document.createElement("tr")
-     CHILD.style.fontFamily = "SFPROREG"
-     parent = document.querySelector("#ROWS3")
-     parent.appendChild(CHILD)
-     for r in range(6):
-      LAST_CHILD = document.createElement("td")
-      DF_YAH = pd.DataFrame(data=YAH)
-      LAST_CHILD.style.fontFamily = "SFPROREG"
 
-      LAST_CHILD.innerHTML = DF_YAH[COLUMN_NAME[r]][i]
-      CHILD.appendChild(LAST_CHILD)
-      
-    
-    
-    
-    
-    
-    
-    
-    
-    
-                      </py-script>
-                                        </tbody>
-                                    </table>
+                                            </script>
+                                            <thead style="font-family: SFPROBOLD">
+                                                <tr style="font-family: SFPROBOLD">
+                                                    <th id="Keyword1">Keyword</th>
+                                                    <th id="RK1">Ranking Pages</th>
+                                                    <th id="Rank1">Rank</th>
+                                                    <th id="Previous1">Previous</th>
+                                                    <th id="Difference1">Difference</th>
+                                                    <th id="NO_TE1">Note</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr style="font-family: SFPROBOLD">
+                                                    <th scope="col">Keyword</th>
+                                                    <th scope="col">Ranking Pages</th>
+                                                    <th scope="col">Rank</th>
+                                                    <th scope="col">Previous</th>
+                                                    <th scope="col">Difference</th>
+                                                    <th scope="col">Note</th>
+                                                    <py-env>
+                                                        - matplotlib
+                                                        - numpy
+                                                        - pandas
+                                                        - paths:
+                                                        - server_RK.py
+                                                        - ABBA_TEST.csv
+
+                                                    </py-env>
+                                                </tr>
+                                            </tfoot>
+                                            <tbody id="ROWS3">
+                                                <py-script>
+                                                    import pandas as pd
+                                                    import numpy as np
+                                                    import server_RK as srk
+                                                    from pyodide import create_proxy
+                                                    GHR = 'Google HOU Rank'
+                                                    KW = 'Keyword'
+                                                    VSBY = 'Visibility'
+                                                    GHD = 'Google HOU Difference'
+                                                    GP = 'Google Previous'
+                                                    GMHR = 'Google Mobile HOU Rank'
+                                                    KW = 'Keyword'
+                                                    VSBY = 'Visibility'
+                                                    GMHD = 'Google Mobile HOU Difference'
+                                                    GMP = 'Google Mobile HOU Previous'
+                                                    BNGR = 'Bing US Rank'
+                                                    KW = 'Keyword'
+                                                    VSBY = 'Visibility'
+                                                    BNGDF = "Bing US Difference"
+                                                    BNGP = 'Bing US Previous'
+                                                    YAHR = 'Yahoo! Rank'
+                                                    KW = 'Keyword'
+                                                    VSBY = 'Visibility'
+                                                    YAHDIF = "Yahoo! Difference"
+                                                    YAHP = 'Yahoo! Previous'
+                                                    SE = "SE"
+                                                    NOTE = "NOTE"
+                                                    GMHR = 'Google Mobile HOU Rank'
+                                                    GMHD = 'Google Mobile HOU Difference'
+                                                    RP = 'Ranking pages'
+                                                    REPORT_NAME = ['Google Report', 'Google Mobile Report', 'Bing
+                                                    Report', 'Yahoo! Report']
+                                                    COLUMN_NAME = ['Keyword', 'Ranking pages', YAHR, YAHP, YAHDIF,
+                                                    'NOTE']
+                                                    frame_data = srk.FIND_FRAME("ABBA_TEST.csv")
+                                                    YAH = frame_data[3]
+                                                    YAH_NAME = REPORT_NAME[3]
+                                                    for i in range(len(frame_data[3])):
+                                                    CHILD = document.createElement("tr")
+                                                    CHILD.style.fontFamily = "SFPROREG"
+                                                    parent = document.querySelector("#ROWS3")
+                                                    parent.appendChild(CHILD)
+                                                    for r in range(6):
+                                                    LAST_CHILD = document.createElement("td")
+                                                    DF_YAH = pd.DataFrame(data=YAH)
+                                                    LAST_CHILD.style.fontFamily = "SFPROREG"
+
+                                                    LAST_CHILD.innerHTML = DF_YAH[COLUMN_NAME[r]][i]
+                                                    CHILD.appendChild(LAST_CHILD)
+
+
+
+
+
+
+
+
+
+
+                                                </py-script>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-    
-                    </div>
-                </div>
 
-                
-                   
+                        </div>
+                    </div>
+
+
+
 
                 </div>
                 <!-- /.container-fluid -->
@@ -1239,14 +1280,16 @@ $('#dataTable3').DataTable({
     <script src="js/demo/chart-pie-demo.js"></script>
     <script src="js/demo/chart-bar-demo.js"></script>
 
-    <script src ="js/demo/chartasm.js"></script>
-     <!-- Page level plugins -->
-     <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-     <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
- 
-     <!-- Page level custom scripts -->
-     <script src="js/demo/datatables-demo.js"></script>
+    <!-- Page level plugins -->
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
+    <!-- Page level custom scripts -->
+    <script src="js/demo/datatables-demo.js"></script>
+    <py-script src="data.py"></py-script>
+    <script src="chartasm.js"></script>
+
+    <!--Plugin for csv-->
 </body>
 
 </html>
